@@ -40,3 +40,19 @@ export function err<T>(error: Error): Result<T> {
     },
   }
 }
+
+/**
+ * Collect an array of results into an array of values wrapped in a single result.
+ * Equivalent to `results.reduce((a, b) => a.flatMap((a) => b.map((b) => a.concat(b))), ok([] as T[]))`.
+ */
+export function sequence<T>(results: Result<T>[]): Result<T[]> {
+  const collected: T[] = []
+  for (const result of results) {
+    if (result.ok) {
+      collected.push(result.value)
+    } else {
+      return result as Result<T[]>
+    }
+  }
+  return ok(collected)
+}
