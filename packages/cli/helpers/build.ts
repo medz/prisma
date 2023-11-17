@@ -97,7 +97,16 @@ const preinstallBuildConfig: BuildOptions = {
   emitTypes: false,
 }
 
-void build([cliBuildConfig, preinstallBuildConfig])
+const migrateBuildConfig: BuildOptions = {
+  name: 'migrate',
+  entryPoints: ['src/migrate/index.ts'],
+  outfile: 'build/migrate',
+  external: ['@prisma/engines'],
+  plugins: [externalPackageJson],
+  bundle: true,
+}
+
+void build([cliBuildConfig, preinstallBuildConfig, migrateBuildConfig])
 
 // Utils ::::::::::::::::::::::::::::::::::::::::::::::::::
 

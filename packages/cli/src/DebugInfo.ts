@@ -1,8 +1,7 @@
+import { getRootCacheDir } from '@prisma/fetch-engine'
 import type { Command } from '@prisma/internals'
 import { arg, format, getSchemaPath, HelpError, isCi, isError, isInteractive, link } from '@prisma/internals'
 import { bold, dim, red, underline } from 'kleur/colors'
-
-import { getRootCacheDir } from '../../fetch-engine/src/utils'
 
 /**
  * $ prisma debug

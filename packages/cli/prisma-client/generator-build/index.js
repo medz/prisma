@@ -14791,7 +14791,6 @@ var require_package3 = __commonJS({
         "@prisma/get-platform": "workspace:*",
         "@prisma/instrumentation": "workspace:*",
         "@prisma/internals": "workspace:*",
-        "@prisma/migrate": "workspace:*",
         "@prisma/mini-proxy": "0.9.4",
         "@prisma/query-engine-wasm": "0.0.5",
         "@snaplet/copycat": "0.17.3",
