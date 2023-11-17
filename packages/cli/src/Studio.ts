@@ -2,13 +2,14 @@ import Debug from '@prisma/debug'
 import { enginesVersion } from '@prisma/engines'
 import { arg, Command, format, getConfig, getDirectUrl, HelpError, isError, loadEnvFile } from '@prisma/internals'
 import { resolveUrl } from '@prisma/internals/dist/engine-commands/getConfig'
-import { getSchemaPathAndPrint } from '@prisma/migrate'
 import { StudioServer } from '@prisma/studio-server'
 import fs from 'fs'
 import getPort from 'get-port'
 import { bold, dim, red } from 'kleur/colors'
 import open from 'open'
 import path from 'path'
+
+import { getSchemaPathAndPrint } from './migrate'
 
 const debug = Debug('prisma:studio')
 
