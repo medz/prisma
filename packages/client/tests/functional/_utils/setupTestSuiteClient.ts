@@ -125,7 +125,7 @@ export function setupTestSuiteClientDriverAdapter({
     const { neonConfig, Pool } = require('@neondatabase/serverless') as typeof import('@neondatabase/serverless')
     const { PrismaNeon } = require('@prisma/adapter-neon') as typeof import('@prisma/adapter-neon')
 
-    neonConfig.wsProxy = () => `127.0.0.1:5488/v1`
+    neonConfig.wsProxy = () => `127.0.0.1:5489/v1`
     neonConfig.webSocketConstructor = WebSocket
     neonConfig.useSecureWebSocket = false // disable tls
     neonConfig.pipelineConnect = false

@@ -202,7 +202,7 @@ services:
       LOG_TRAFFIC: 'true'
       LOG_CONN_INFO: 'true'
     ports:
-      - '5488:80'
+      - '5489:80'
     depends_on:
       - postgres-16
     restart: always
