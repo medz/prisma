@@ -87,6 +87,7 @@
     "@types/node": "18.18.9",
     "@types/node-fetch": "2.6.9",
     "@types/rimraf": "3.0.2",
+    "async-listen": "^3.0.1",
     "checkpoint-client": "1.1.27",
     "debug": "4.3.4",
     "dotenv": "16.0.3",
@@ -111,9 +112,11 @@
     "strip-ansi": "6.0.1",
     "ts-pattern": "5.0.5",
     "typescript": "5.2.2",
+    "xdg-app-paths": "^8.3.0",
     "zx": "7.2.3"
   },
   "scripts": {
+    "prisma": "ts-node src/bin.ts",
     "dev": "DEV=true node -r esbuild-register helpers/build.ts",
     "build": "node -r esbuild-register helpers/build.ts",
     "test": "dotenv -e ../../.db.env -- node -r esbuild-register helpers/run-tests.ts",
